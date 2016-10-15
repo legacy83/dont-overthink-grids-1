@@ -27,10 +27,105 @@ html {
     box-sizing: inherit;
 }
 
+/* Clearings
+-------------------------------------------------------------- */
+
+.front-page-2cols:before,
+.front-page-2cols:after,
+.front-page-intro:before,
+.front-page-intro:after {
+    content: " ";
+    display: table;
+}
+
+.front-page-2cols:after,
+.front-page-intro:after {
+    clear: both;
+}
+
 /* Front Page Intro
 -------------------------------------------------------------- */
 
 .front-page-intro {
     border-bottom: 4px double #ededed;
     padding-bottom: 24px;
+}
+
+/* Front Page 2Cols
+-------------------------------------------------------------- */
+
+.front-page-2cols .entry-content {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.front-page-2cols .col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .front-page-2cols .col {
+        float: left;
+        width: 50%;
+    }
+}
+
+/* Front Page 3Cols
+-------------------------------------------------------------- */
+
+.front-page-3cols .entry-content {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.front-page-3cols .col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .front-page-3cols .col {
+        float: left;
+        width: 33.333333333%;
+    }
+}
+
+/* Front Page 4Cols
+-------------------------------------------------------------- */
+
+.front-page-4cols .entry-content {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.front-page-4cols .col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .front-page-4cols .col {
+        float: left;
+        width: 25%;
+    }
+}
+
+/* Grid Column Items
+-------------------------------------------------------------- */
+
+.col h4 {
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 20px;
+}
+
+.col:nth-child(even) h4 {
+    background-color: #e3e3e3;
 }

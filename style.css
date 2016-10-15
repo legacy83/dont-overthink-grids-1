@@ -30,28 +30,13 @@ html {
 /* Clearings
 -------------------------------------------------------------- */
 
-.front-page-2cols:before,
-.front-page-2cols:after,
-.front-page-2cols-left:before,
-.front-page-2cols-left:after,
-.front-page-2cols-right:before,
-.front-page-2cols-right:after,
-.front-page-3cols:before,
-.front-page-3cols:after,
-.front-page-4cols:before,
-.front-page-4cols:after,
-.front-page-intro:before,
-.front-page-intro:after {
+.col-wrap:before,
+.col-wrap:after {
     content: " ";
     display: table;
 }
 
-.front-page-2cols:after,
-.front-page-2cols-left:after,
-.front-page-2cols-right:after,
-.front-page-3cols:after,
-.front-page-4cols:after,
-.front-page-intro:after {
+.col-wrap:after {
     clear: both;
 }
 
@@ -73,14 +58,12 @@ html {
 
 .front-page-intro {
     border-bottom: 4px double #ededed;
-    margin-bottom: 72px;
-    padding-bottom: 24px;
 }
 
 /* Front Page 2Cols
 -------------------------------------------------------------- */
 
-.front-page-2cols .entry-content {
+.front-page-2cols .col-wrap {
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -102,7 +85,7 @@ html {
 /* Front Page 3Cols
 -------------------------------------------------------------- */
 
-.front-page-3cols .entry-content {
+.front-page-3cols .col-wrap {
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -124,7 +107,7 @@ html {
 /* Front Page 4Cols
 -------------------------------------------------------------- */
 
-.front-page-4cols .entry-content {
+.front-page-4cols .col-wrap {
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -146,7 +129,7 @@ html {
 /* Front Page 2Cols Left
 -------------------------------------------------------------- */
 
-.front-page-2cols-left .entry-content {
+.front-page-2cols-left .col-wrap {
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -172,7 +155,7 @@ html {
 /* Front Page 2Cols Right
 -------------------------------------------------------------- */
 
-.front-page-2cols-right .entry-content {
+.front-page-2cols-right .col-wrap {
     margin-left: -15px;
     margin-right: -15px;
 }

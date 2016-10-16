@@ -45,10 +45,10 @@ html {
 
 .front-page-intro,
 .front-page-2cols,
-.front-page-3cols,
-.front-page-4cols,
 .front-page-2cols-left,
-.front-page-2cols-right {
+.front-page-2cols-right,
+.front-page-3cols,
+.front-page-4cols {
     margin-bottom: 72px;
     padding-bottom: 24px;
 }

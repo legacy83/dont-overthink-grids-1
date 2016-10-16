@@ -1,6 +1,6 @@
 <section class="front-page-intro">
     <header class="entry-header">
-        <h1 class="entry-title">Jumbotron heading</h1>
+        <h1 class="entry-title">Don't Overthink Grids</h1>
     </header>
 
     <div class="entry-content">

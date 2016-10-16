@@ -14,8 +14,8 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/* Elements
--------------------------------------------------------------- */
+/* # Elements
+---------------------------------------------------------------------------------------------------- */
 
 html {
     box-sizing: border-box;
@@ -27,8 +27,8 @@ html {
     box-sizing: inherit;
 }
 
-/* Clearings
--------------------------------------------------------------- */
+/* # Clearings
+---------------------------------------------------------------------------------------------------- */
 
 .col-wrap:before,
 .col-wrap:after {
@@ -40,8 +40,8 @@ html {
     clear: both;
 }
 
-/* Front Page
--------------------------------------------------------------- */
+/* # Front Page
+---------------------------------------------------------------------------------------------------- */
 
 .front-page-intro,
 .front-page-2cols,
@@ -53,15 +53,15 @@ html {
     padding-bottom: 24px;
 }
 
-/* Front Page Intro
--------------------------------------------------------------- */
+/* ## Front Page Intro
+--------------------------------------------- */
 
 .front-page-intro {
     border-bottom: 4px double #ededed;
 }
 
-/* Front Page 2Cols
--------------------------------------------------------------- */
+/* ## Front Page 2Cols
+--------------------------------------------- */
 
 .front-page-2cols .col-wrap {
     margin-left: -15px;
@@ -82,8 +82,60 @@ html {
     }
 }
 
-/* Front Page 3Cols
--------------------------------------------------------------- */
+/* ## Front Page 2Cols - Left
+--------------------------------------------- */
+
+.front-page-2cols-left .col-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.front-page-2cols-left .col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .front-page-2cols-left .col {
+        float: left;
+        width: 40%;
+    }
+
+    .front-page-2cols-left .col:nth-child(odd) {
+        width: 60%;
+    }
+}
+
+/* ## Front Page 2Cols - Right
+--------------------------------------------- */
+
+.front-page-2cols-right .col-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.front-page-2cols-right .col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .front-page-2cols-right .col {
+        float: left;
+        width: 40%;
+    }
+
+    .front-page-2cols-right .col:nth-child(even) {
+        width: 60%;
+    }
+}
+
+/* ## Front Page 3Cols
+--------------------------------------------- */
 
 .front-page-3cols .col-wrap {
     margin-left: -15px;
@@ -104,8 +156,8 @@ html {
     }
 }
 
-/* Front Page 4Cols
--------------------------------------------------------------- */
+/* ## Front Page 4Cols
+--------------------------------------------- */
 
 .front-page-4cols .col-wrap {
     margin-left: -15px;
@@ -123,58 +175,6 @@ html {
     .front-page-4cols .col {
         float: left;
         width: 25%;
-    }
-}
-
-/* Front Page 2Cols Left
--------------------------------------------------------------- */
-
-.front-page-2cols-left .col-wrap {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.front-page-2cols-left .col {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-}
-
-@media (min-width: 600px) {
-    .front-page-2cols-left .col {
-        float: left;
-        width: 40%;
-    }
-
-    .front-page-2cols-left .col:nth-child(even) {
-        width: 60%;
-    }
-}
-
-/* Front Page 2Cols Right
--------------------------------------------------------------- */
-
-.front-page-2cols-right .col-wrap {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.front-page-2cols-right .col {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-}
-
-@media (min-width: 600px) {
-    .front-page-2cols-right .col {
-        float: left;
-        width: 40%;
-    }
-
-    .front-page-2cols-right .col:nth-child(odd) {
-        width: 60%;
     }
 }
 

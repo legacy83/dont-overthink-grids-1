@@ -1,10 +1,16 @@
 <?php
-/**
- * @package    Dont\Overthink\Grids\Theme
- * @author     Thiago Senna <thiago@thremes.com.br>
- * @copyright  Copyright (c) 2016, Thiago Senna
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- */
-require_once( dirname( __FILE__ ) . '/includes/functions.php' );
-require_once( dirname( __FILE__ ) . '/includes/functions-styles.php' );
-require_once( dirname( __FILE__ ) . '/includes/functions-template-loader.php' );
+
+namespace Dont\Overthink\Grids;
+
+use function Composer\Autoload\includeFile;
+
+if ( defined( 'DALEN_THE_PLUGIN' ) && DALEN_THE_PLUGIN ) {
+    $loader = new \Composer\Autoload\ClassLoader();
+    $loader->setPsr4( 'Dont\\Overthink\\Grids\\', dirname( __FILE__ ) . '/includes/src' );
+    $loader->register();
+
+    includeFile( dirname( __FILE__ ) . '/includes/functions-helpers.php' );
+
+    theme()->register( new ServiceProvider() );
+    theme()->run();
+}

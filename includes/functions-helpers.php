@@ -21,14 +21,19 @@ function theme()
     return $theme;
 }
 
-/**
- * Renders the template file.
- *
- * @param $name
- *
- * @return string
- */
-function template( $name )
+function template( $slug, $name = null, array $data = [] )
 {
-    locate_template( [ "resources/templates/{$name}.tpl.php" ], true );
+    $templates = array();
+    $name = (string)$name;
+    if ( '' !== $name ) {
+        $templates[] = "resources/templates/{$slug}-{$name}.tpl.php";
+    }
+
+    $templates[] = "resources/templates/{$slug}.tpl.php";
+
+    $located = locate_template( $templates, false );
+    if ( file_exists( $located ) ) {
+        extract( $data );
+        include( $located );
+    }
 }

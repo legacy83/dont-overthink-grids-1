@@ -1,20 +1,10 @@
 <?php
 
-namespace site\dogrids;
+namespace site\dogrids\domain;
 
-
-class Model extends \stdClass
+class ColumnService
 {
-    public function getIntro()
-    {
-        $intro = new \stdClass();
-        $intro->title = __( "Don't Overthink Grids", 'dogrids' );
-        $intro->classes = [ 'front-page-intro' ];
-
-        return $intro;
-    }
-
-    public function getColumns()
+    public function getAll()
     {
         $columns = [];
 

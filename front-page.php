@@ -5,14 +5,14 @@ namespace site\dogrids;
 add_action( 'site/dogrids/front-page/content', function () {
 
     echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
-        'intro' => theme( 'model' )->getIntro(),
+        'intro' => theme( 'domain/intro' )->getOne(),
     ] );
 
 } );
 
 add_action( 'site/dogrids/front-page/content', function () {
 
-    foreach ( theme( 'model' )->getColumns() as $column ) {
+    foreach ( theme( 'domain/column' )->getAll() as $column ) {
         echo template( 'partials/front-page/front-page-section', 'cols' )->render( [
             'column' => $column,
         ] );

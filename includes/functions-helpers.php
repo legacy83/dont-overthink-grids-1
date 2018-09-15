@@ -23,17 +23,6 @@ function theme()
 
 function template( $slug, $name = null, array $data = [] )
 {
-    $templates = array();
-    $name = (string)$name;
-    if ( '' !== $name ) {
-        $templates[] = "resources/templates/{$slug}-{$name}.tpl.php";
-    }
-
-    $templates[] = "resources/templates/{$slug}.tpl.php";
-
-    $located = locate_template( $templates, false );
-    if ( file_exists( $located ) ) {
-        extract( $data );
-        include( $located );
-    }
+    $template = new Template( "resources/templates/{$slug}", $name );
+    print $template->render( $data );
 }

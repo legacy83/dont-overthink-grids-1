@@ -1,16 +1,16 @@
-<?php get_header(); ?>
+<?php
 
-<div id="primary" class="site-content">
-    <div id="content" role="main">
+namespace site\dogrids;
 
-        <?= \site\dogrids\template( 'page/content-front-page-intro' ); ?>
-        <?= \site\dogrids\template( 'page/content-front-page-2cols' ); ?>
-        <?= \site\dogrids\template( 'page/content-front-page-2cols-left' ); ?>
-        <?= \site\dogrids\template( 'page/content-front-page-2cols-right' ); ?>
-        <?= \site\dogrids\template( 'page/content-front-page-3cols' ); ?>
-        <?= \site\dogrids\template( 'page/content-front-page-4cols' ); ?>
+// renders the front-page content
+add_action( 'dogrids/front-page/content', function () {
+    template( 'page/content-front-page-intro' );
+    template( 'page/content-front-page-2cols' );
+    template( 'page/content-front-page-2cols-left' );
+    template( 'page/content-front-page-2cols-right' );
+    template( 'page/content-front-page-3cols' );
+    template( 'page/content-front-page-4cols' );
+} );
 
-    </div><!-- #content -->
-</div><!-- #primary -->
-
-<?php get_footer(); ?>
+// renders the front-page
+template( 'front-page' );

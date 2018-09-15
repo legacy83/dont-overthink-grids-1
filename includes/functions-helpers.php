@@ -30,8 +30,5 @@ function theme()
  */
 function template( $name )
 {
-    ob_start();
     locate_template( [ "resources/templates/{$name}.tpl.php" ], true );
-
-    return ob_get_clean();
 }

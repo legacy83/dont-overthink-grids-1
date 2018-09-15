@@ -4,19 +4,13 @@ namespace site\dogrids;
 
 add_action( 'site/dogrids/front-page/content', function () {
 
-    $intro = theme( 'model' )->getIntro();
-    $columns = theme( 'model' )->getColumns();
-
     echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
-        'title' => $intro->title,
-        'classes' => $intro->classes,
+        'intro' => theme( 'model' )->getIntro(),
     ] );
 
-    foreach ( $columns as $column ) {
+    foreach ( theme( 'model' )->getColumns() as $column ) {
         echo template( 'partials/front-page/front-page-section', 'cols' )->render( [
-            'title' => $column->title,
-            'columns' => $column->columns,
-            'classes' => $column->classes,
+            'column' => $column,
         ] );
     }
 

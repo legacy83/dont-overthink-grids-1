@@ -1,10 +1,9 @@
-<?php /** @var string $title */ ?>
-<?php /** @var array $classes */ ?>
+<?php /** @var stdClass $intro */ ?>
 
-<section class="<?= implode( ' ', $classes ); ?>">
+<section class="<?= implode( ' ', $intro->classes ); ?>">
 
     <header class="entry-header">
-        <h1 class="entry-title"><?= $title; ?></h1>
+        <h1 class="entry-title"><?= $intro->title; ?></h1>
     </header>
 
     <div class="entry-content">

@@ -1,10 +1,15 @@
 <?php
 
-namespace Dont\Overthink\Grids;
+namespace site\dogrids;
 
 use trsenna\dalen\kernel\foundation\ServiceLocator;
 use trsenna\dalen\kernel\Theme;
 
+/**
+ * Gets the theme instance.
+ *
+ * @return Theme
+ */
 function theme()
 {
     static $theme;

@@ -4,8 +4,13 @@ namespace site\dogrids;
 
 add_action( 'site/dogrids/front-page/content', function () {
 
-    $intro = model_get_intro();
-    $columns = model_get_columns();
+    $serviceLocator = theme()->getServiceLocator();
+
+    /* @var $model \site\dogrids\Model */
+    $model = $serviceLocator->get( 'model' );
+
+    $intro = $model->getIntro();
+    $columns = $model->getColumns();
 
     echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
         'title' => $intro->title,

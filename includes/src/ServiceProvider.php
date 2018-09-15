@@ -18,5 +18,6 @@ class ServiceProvider implements ServiceProviderInterface
     public function register( ServiceLocatorInterface $serviceLocator )
     {
         $serviceLocator->set( 'assets', new Assets() );
+        $serviceLocator->set( 'model', new Model() );
     }
 }

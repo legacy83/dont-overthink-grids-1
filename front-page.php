@@ -8,6 +8,10 @@ add_action( 'site/dogrids/front-page/content', function () {
         'intro' => theme( 'model' )->getIntro(),
     ] );
 
+} );
+
+add_action( 'site/dogrids/front-page/content', function () {
+
     foreach ( theme( 'model' )->getColumns() as $column ) {
         echo template( 'partials/front-page/front-page-section', 'cols' )->render( [
             'column' => $column,

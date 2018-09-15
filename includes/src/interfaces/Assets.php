@@ -1,13 +1,13 @@
 <?php
 
-namespace site\dogrids;
+namespace site\dogrids\interfaces;
 
 use trsenna\dalen\kernel\contracts\BootstrapInterface;
 
 /**
  * Class Assets
  *
- * @package site\dogrids
+ * @package site\dogrids\interfaces
  */
 class Assets implements BootstrapInterface
 {

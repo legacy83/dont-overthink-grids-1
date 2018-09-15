@@ -2,6 +2,7 @@
 
 namespace site\dogrids;
 
+use site\dogrids\interfaces\Template;
 use trsenna\dalen\kernel\foundation\ServiceLocator;
 use trsenna\dalen\kernel\Theme;
 

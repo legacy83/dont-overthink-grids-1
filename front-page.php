@@ -5,17 +5,12 @@ namespace site\dogrids;
 add_action( 'site/dogrids/front-page/content', function () {
 
     $intro = model_get_intro();
+    $columns = model_get_columns();
 
     echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
         'title' => $intro->title,
         'classes' => $intro->classes,
     ] );
-
-} );
-
-add_action( 'site/dogrids/front-page/content', function () {
-
-    $columns = model_get_columns();
 
     foreach ( $columns as $column ) {
         echo template( 'partials/front-page/front-page-section', 'cols' )->render( [

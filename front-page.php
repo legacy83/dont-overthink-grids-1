@@ -3,7 +3,7 @@
 namespace site\dogrids;
 
 // renders the front-page content
-add_action( 'dogrids/front-page/content', function () {
+add_action( 'site/dogrids/front-page/content', function () {
     template( 'page/content-front-page-intro' );
     template( 'page/content-front-page-2cols' );
     template( 'page/content-front-page-2cols-left' );

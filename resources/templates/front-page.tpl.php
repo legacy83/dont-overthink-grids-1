@@ -3,7 +3,7 @@
 <div id="primary" class="site-content">
     <div id="content" role="main">
 
-        <?php do_action( 'dogrids/front-page/content' ); ?>
+        <?php do_action( 'site/dogrids/front-page/content' ); ?>
 
     </div><!-- #content -->
 </div><!-- #primary -->

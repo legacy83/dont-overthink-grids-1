@@ -21,8 +21,7 @@ function theme()
     return $theme;
 }
 
-function template( $slug, $name = null, array $data = [] )
+function template( $slug, $name = null )
 {
-    $template = new Template( "resources/templates/{$slug}", $name );
-    print $template->render( $data );
+    return new Template( "resources/templates/{$slug}", $name );
 }

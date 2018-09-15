@@ -25,3 +25,4 @@ $loader->register();
 #
 
 includeFile( get_theme_file_path( "includes/functions-helpers.php" ) );
+includeFile( get_theme_file_path( "includes/functions-model.php" ) );

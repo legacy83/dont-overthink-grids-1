@@ -6,16 +6,22 @@ use trsenna\dalen\kernel\foundation\ServiceLocator;
 use trsenna\dalen\kernel\Theme;
 
 /**
- * Gets the theme instance.
+ * Get the theme instance.
  *
- * @return Theme
+ * @param string $component
+ *
+ * @return Theme|mixed
  */
-function theme()
+function theme( $component = null )
 {
     static $theme;
     if ( !isset( $theme ) ) {
         $serviceLocator = new ServiceLocator();
         $theme = new Theme( $serviceLocator );
+    }
+
+    if ( !is_null( $component ) ) {
+        return $theme->getServiceLocator()->get( $component );
     }
 
     return $theme;

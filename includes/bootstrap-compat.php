@@ -37,4 +37,12 @@ if ( !$safe ) {
     } );
 }
 
+# ------------------------------------------------------------------------------
+# Return if it's safe environment.
+# ------------------------------------------------------------------------------
+#
+# Just return a positive or negative status about how safe is
+# running this theme with the current WordPress environment.
+#
+
 return $safe;

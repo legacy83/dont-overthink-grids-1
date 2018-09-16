@@ -12,9 +12,9 @@ add_action( 'site/dogrids/front-page/content', function () {
 
 add_action( 'site/dogrids/front-page/content', function () {
 
-    foreach ( theme( 'domain/column' )->getAll() as $column ) {
-        echo template( 'partials/front-page/front-page-section', 'cols' )->render( [
-            'column' => $column,
+    foreach ( theme( 'domain/columns' ) as $columns ) {
+        echo template( 'partials/front-page/front-page-section', 'columns' )->render( [
+            'columns' => $columns,
         ] );
     }
 

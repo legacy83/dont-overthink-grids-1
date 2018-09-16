@@ -2,7 +2,7 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\ColumnService;
+use site\dogrids\domain\ColumnsList;
 use site\dogrids\domain\IntroService;
 use site\dogrids\interfaces\Assets;
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
@@ -21,7 +21,7 @@ class ServiceProvider implements ServiceProviderInterface
     public function register( ServiceLocatorInterface $serviceLocator )
     {
         $serviceLocator->set( 'domain/intro', new IntroService() );
-        $serviceLocator->set( 'domain/column', new ColumnService() );
+        $serviceLocator->set( 'domain/columns', new ColumnsList() );
         $serviceLocator->set( 'interfaces/assets', new Assets() );
     }
 }

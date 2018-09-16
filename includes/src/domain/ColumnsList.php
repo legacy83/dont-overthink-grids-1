@@ -2,42 +2,46 @@
 
 namespace site\dogrids\domain;
 
-class ColumnService
+class ColumnsList implements \IteratorAggregate
 {
-    public function getAll()
+    /**
+     * @inheritdoc
+     */
+    public function getIterator()
     {
         $columns = [];
 
         $index = sizeof( $columns );
         $columns[ $index ] = new \stdClass();
+        $columns[ $index ]->size = 2;
         $columns[ $index ]->title = __( "Two Columns", 'dogrids' );
-        $columns[ $index ]->columns = 2;
         $columns[ $index ]->classes = [ 'front-page-2cols' ];
 
         $index = sizeof( $columns );
         $columns[ $index ] = new \stdClass();
+        $columns[ $index ]->size = 2;
         $columns[ $index ]->title = __( "Two Columns - Left", 'dogrids' );
-        $columns[ $index ]->columns = 2;
+        $columns[ $index ]->count = 2;
         $columns[ $index ]->classes = [ 'front-page-2cols-left' ];
 
         $index = sizeof( $columns );
         $columns[ $index ] = new \stdClass();
+        $columns[ $index ]->size = 2;
         $columns[ $index ]->title = __( "Two Columns - Right", 'dogrids' );
-        $columns[ $index ]->columns = 2;
         $columns[ $index ]->classes = [ 'front-page-2cols-right' ];
 
         $index = sizeof( $columns );
         $columns[ $index ] = new \stdClass();
+        $columns[ $index ]->size = 3;
         $columns[ $index ]->title = __( "Three Columns", 'dogrids' );
-        $columns[ $index ]->columns = 3;
         $columns[ $index ]->classes = [ 'front-page-3cols' ];
 
         $index = sizeof( $columns );
         $columns[ $index ] = new \stdClass();
+        $columns[ $index ]->size = 4;
         $columns[ $index ]->title = __( "Four Columns", 'dogrids' );
-        $columns[ $index ]->columns = 4;
         $columns[ $index ]->classes = [ 'front-page-4cols' ];
 
-        return $columns;
+        return new \ArrayIterator($columns);
     }
 }

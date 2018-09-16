@@ -2,7 +2,7 @@
 
 namespace site\dogrids\domain;
 
-class IntroService
+class IntroFinder
 {
     public function getOne()
     {

@@ -2,6 +2,8 @@
 
 namespace site\dogrids;
 
+use site\dogrids\interfaces\ServiceProvider;
+
 # ------------------------------------------------------------------------------
 # Register service providers.
 # ------------------------------------------------------------------------------

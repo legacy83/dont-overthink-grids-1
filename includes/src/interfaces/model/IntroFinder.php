@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids\domain;
+namespace site\dogrids\interfaces\model;
 
 class IntroFinder
 {

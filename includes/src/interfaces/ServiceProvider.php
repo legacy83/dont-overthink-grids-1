@@ -1,10 +1,7 @@
 <?php
 
-namespace site\dogrids;
+namespace site\dogrids\interfaces;
 
-use site\dogrids\domain\ColumnsList;
-use site\dogrids\domain\IntroFinder;
-use site\dogrids\interfaces\Assets;
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 
@@ -20,8 +17,6 @@ class ServiceProvider implements ServiceProviderInterface
      */
     public function register( ServiceLocatorInterface $serviceLocator )
     {
-        $serviceLocator->set( 'domain/intro', new IntroFinder() );
-        $serviceLocator->set( 'domain/columns', new ColumnsList() );
         $serviceLocator->set( 'interfaces/assets', new Assets() );
     }
 }

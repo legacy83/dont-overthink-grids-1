@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids\domain;
+namespace site\dogrids\interfaces\model;
 
 class ColumnsList implements \IteratorAggregate
 {
@@ -42,6 +42,6 @@ class ColumnsList implements \IteratorAggregate
         $columns[ $index ]->title = __( "Four Columns", 'dogrids' );
         $columns[ $index ]->classes = [ 'front-page-4cols' ];
 
-        return new \ArrayIterator($columns);
+        return new \ArrayIterator( $columns );
     }
 }

@@ -4,7 +4,6 @@ namespace site\dogrids;
 
 use site\dogrids\domain\ColumnsList;
 use site\dogrids\domain\IntroFinder;
-use site\dogrids\domain\IntroService;
 use site\dogrids\interfaces\Assets;
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;

@@ -2,12 +2,13 @@
 
 namespace site\dogrids\interfaces\shared;
 
-
 class Template
 {
     private $slug;
     private $name;
     private $located;
+
+    protected $extension = 'tpl.php';
 
     public function __construct( $slug, $name = null )
     {
@@ -38,11 +39,16 @@ class Template
         $templates = array();
         $name = (string)$name;
         if ( '' !== $name ) {
-            $templates[] = "{$slug}-{$name}.tpl.php";
+            $templates[] = "{$slug}-{$name}.{$this->extension}";
         }
 
-        $templates[] = "{$slug}.tpl.php";
+        $templates[] = "{$slug}.{$this->extension}";
 
         return locate_template( $templates, false );
+    }
+
+    public function setExtension( $extension )
+    {
+        $this->extension = $extension;
     }
 }

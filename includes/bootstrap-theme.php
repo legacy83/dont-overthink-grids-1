@@ -2,9 +2,9 @@
 
 namespace site\dogrids;
 
+use site\dogrids\interfaces\Assets;
 use site\dogrids\interfaces\model\ColumnsFinder;
 use site\dogrids\interfaces\model\IntroFinder;
-use site\dogrids\interfaces\providers\ServiceProvider;
 
 # ------------------------------------------------------------------------------
 # Register service providers.
@@ -14,7 +14,7 @@ use site\dogrids\interfaces\providers\ServiceProvider;
 # for running the theme.
 #
 
-theme()->register( new ServiceProvider() );
+theme()->register( new Assets() );
 theme()->register( new ColumnsFinder() );
 theme()->register( new IntroFinder() );
 

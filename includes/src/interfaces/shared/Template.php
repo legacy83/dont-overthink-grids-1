@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids\interfaces;
+namespace site\dogrids\interfaces\shared;
 
 
 class Template

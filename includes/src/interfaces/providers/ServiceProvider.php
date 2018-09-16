@@ -1,7 +1,8 @@
 <?php
 
-namespace site\dogrids\interfaces;
+namespace site\dogrids\interfaces\providers;
 
+use site\dogrids\interfaces\Assets;
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 

@@ -6,14 +6,7 @@ use site\dogrids\interfaces\shared\Template;
 use trsenna\dalen\kernel\foundation\ServiceLocator;
 use trsenna\dalen\kernel\Theme;
 
-/**
- * Get the theme instance.
- *
- * @param string $component
- *
- * @return Theme|mixed
- */
-function theme( $component = null )
+function theme()
 {
     static $theme;
     if ( !isset( $theme ) ) {
@@ -21,11 +14,12 @@ function theme( $component = null )
         $theme = new Theme( $serviceLocator );
     }
 
-    if ( !is_null( $component ) ) {
-        return $theme->getServiceLocator()->get( $component );
-    }
-
     return $theme;
+}
+
+function component( $key )
+{
+    return theme()->getServiceLocator()->get( $key );
 }
 
 function template( $slug, $name = null )

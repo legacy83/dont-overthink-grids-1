@@ -2,31 +2,24 @@
 
 namespace site\dogrids\interfaces\model;
 
-class ColumnsList implements \IteratorAggregate
+use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
+use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
+
+class ColumnsFinder implements ServiceProviderInterface, \IteratorAggregate
 {
-    private $data;
-
-    private function __construct( array $data )
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function getIterator()
     {
-        return new \ArrayIterator( $this->data );
-    }
-
-    public static function fake()
-    {
-        return new ColumnsList( [
+        return new \ArrayIterator( [
             [ 'size' => 2, 'title' => 'Two Columns', 'classes' => [ 'front-page-2cols' ] ],
             [ 'size' => 2, 'title' => 'Two Columns - Left', 'classes' => [ 'front-page-2cols-left' ] ],
             [ 'size' => 2, 'title' => 'Two Columns - Right', 'classes' => [ 'front-page-2cols-right' ] ],
             [ 'size' => 3, 'title' => 'Three Columns', 'classes' => [ 'front-page-3cols' ] ],
             [ 'size' => 4, 'title' => 'Four Columns', 'classes' => [ 'front-page-4cols' ] ],
         ] );
+    }
+
+    public function register( ServiceLocatorInterface $serviceLocator )
+    {
+        $serviceLocator->set( self::class, $this );
     }
 }

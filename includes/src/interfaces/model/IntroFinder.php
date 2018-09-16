@@ -2,14 +2,25 @@
 
 namespace site\dogrids\interfaces\model;
 
-class IntroFinder
+class IntroFinder implements \IteratorAggregate
 {
-    public function getOne()
-    {
-        $intro = new \stdClass();
-        $intro->title = __( "Don't Overthink Grids", 'dogrids' );
-        $intro->classes = [ 'front-page-intro' ];
+    private $data;
 
-        return $intro;
+    public function __construct( array $data )
+    {
+        $this->data = $data;
+    }
+
+    public function getIterator()
+    {
+        $iterator = new \ArrayIterator( $this->data );
+        return new \LimitIterator( $iterator );
+    }
+
+    public static function fake()
+    {
+        return new IntroFinder( [
+            [ 'title' => "Don't Overthink Grids", 'classes' => [ 'front-page-intro' ], ]
+        ] );
     }
 }

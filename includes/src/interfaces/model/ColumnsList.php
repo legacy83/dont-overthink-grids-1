@@ -4,44 +4,29 @@ namespace site\dogrids\interfaces\model;
 
 class ColumnsList implements \IteratorAggregate
 {
+    private $data;
+
+    private function __construct( array $data )
+    {
+        $this->data = $data;
+    }
+
     /**
      * @inheritdoc
      */
     public function getIterator()
     {
-        $columns = [];
+        return new \ArrayIterator( $this->data );
+    }
 
-        $index = sizeof( $columns );
-        $columns[ $index ] = new \stdClass();
-        $columns[ $index ]->size = 2;
-        $columns[ $index ]->title = __( "Two Columns", 'dogrids' );
-        $columns[ $index ]->classes = [ 'front-page-2cols' ];
-
-        $index = sizeof( $columns );
-        $columns[ $index ] = new \stdClass();
-        $columns[ $index ]->size = 2;
-        $columns[ $index ]->title = __( "Two Columns - Left", 'dogrids' );
-        $columns[ $index ]->count = 2;
-        $columns[ $index ]->classes = [ 'front-page-2cols-left' ];
-
-        $index = sizeof( $columns );
-        $columns[ $index ] = new \stdClass();
-        $columns[ $index ]->size = 2;
-        $columns[ $index ]->title = __( "Two Columns - Right", 'dogrids' );
-        $columns[ $index ]->classes = [ 'front-page-2cols-right' ];
-
-        $index = sizeof( $columns );
-        $columns[ $index ] = new \stdClass();
-        $columns[ $index ]->size = 3;
-        $columns[ $index ]->title = __( "Three Columns", 'dogrids' );
-        $columns[ $index ]->classes = [ 'front-page-3cols' ];
-
-        $index = sizeof( $columns );
-        $columns[ $index ] = new \stdClass();
-        $columns[ $index ]->size = 4;
-        $columns[ $index ]->title = __( "Four Columns", 'dogrids' );
-        $columns[ $index ]->classes = [ 'front-page-4cols' ];
-
-        return new \ArrayIterator( $columns );
+    public static function fake()
+    {
+        return new ColumnsList( [
+            [ 'size' => 2, 'title' => 'Two Columns', 'classes' => [ 'front-page-2cols' ] ],
+            [ 'size' => 2, 'title' => 'Two Columns - Left', 'classes' => [ 'front-page-2cols-left' ] ],
+            [ 'size' => 2, 'title' => 'Two Columns - Right', 'classes' => [ 'front-page-2cols-right' ] ],
+            [ 'size' => 3, 'title' => 'Three Columns', 'classes' => [ 'front-page-3cols' ] ],
+            [ 'size' => 4, 'title' => 'Four Columns', 'classes' => [ 'front-page-4cols' ] ],
+        ] );
     }
 }

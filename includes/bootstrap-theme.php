@@ -2,6 +2,7 @@
 
 namespace site\dogrids;
 
+use site\dogrids\interfaces\model\IntroFinder;
 use site\dogrids\interfaces\providers\ServiceProvider;
 
 # ------------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use site\dogrids\interfaces\providers\ServiceProvider;
 #
 
 theme()->register( new ServiceProvider() );
+theme()->register( new IntroFinder() );
 
 # ------------------------------------------------------------------------------
 # Perform bootstrap actions.

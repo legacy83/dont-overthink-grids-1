@@ -6,8 +6,8 @@ use site\dogrids\interfaces\model\ColumnsList;
 use site\dogrids\interfaces\model\IntroFinder;
 
 add_action( 'site/dogrids/front-page/content', function () {
-
-    foreach ( IntroFinder::fake() as $intro ) {
+    
+    foreach ( theme( IntroFinder::class ) as $intro ) {
         echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
             'intro' => (object)$intro,
         ] );

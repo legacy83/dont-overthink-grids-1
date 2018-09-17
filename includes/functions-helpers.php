@@ -26,7 +26,7 @@ function component( $key )
 function template( $slug, $name = null )
 {
     $template = new Template( "resources/templates/{$slug}", $name );
-    $template->setLocate( new ThemeLocate() );
+    $template->setLocate( new ThemeLocate( 'tpl.php' ) );
 
     return $template;
 }

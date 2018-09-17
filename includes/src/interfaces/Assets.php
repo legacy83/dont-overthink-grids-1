@@ -2,6 +2,7 @@
 
 namespace site\dogrids\interfaces;
 
+use site\dogrids\infrastructure\ServiceProvidedTrait;
 use trsenna\dalen\kernel\contracts\BootstrapInterface;
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
@@ -11,8 +12,10 @@ use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
  *
  * @package site\dogrids\interfaces
  */
-class Assets implements ServiceProviderInterface, BootstrapInterface
+class Assets implements BootstrapInterface, ServiceProviderInterface
 {
+    use ServiceProvidedTrait;
+
     /**
      * @inheritdoc
      */
@@ -30,13 +33,5 @@ class Assets implements ServiceProviderInterface, BootstrapInterface
             wp_enqueue_style( 'dont-overthink-grids-parent', "{$template_dir_uri}style.css" );
             wp_enqueue_style( 'dont-overthink-grids-style', get_stylesheet_uri() );
         } );
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function register( ServiceLocatorInterface $serviceLocator )
-    {
-        $serviceLocator->set( self::class, $this );
     }
 }

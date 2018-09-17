@@ -3,9 +3,13 @@
 namespace site\dogrids\domain\service;
 
 use site\dogrids\domain\shared\AbstractDataProvider;
+use site\dogrids\infrastructure\ServiceProvidedTrait;
+use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 
-class Columns extends AbstractDataProvider
+class Columns extends AbstractDataProvider implements ServiceProviderInterface
 {
+    use ServiceProvidedTrait;
+
     protected function load()
     {
         return [

@@ -2,9 +2,10 @@
 
 namespace site\dogrids;
 
-use site\dogrids\interfaces\shared\Template;
 use trsenna\dalen\kernel\foundation\ServiceLocator;
 use trsenna\dalen\kernel\Theme;
+use trsenna\dalen\template\foundation\ThemeLocate;
+use trsenna\dalen\template\Template;
 
 function theme()
 {
@@ -24,5 +25,8 @@ function component( $key )
 
 function template( $slug, $name = null )
 {
-    return new Template( "resources/templates/{$slug}", $name );
+    $template = new Template( "resources/templates/{$slug}", $name );
+    $template->setLocate( new ThemeLocate() );
+
+    return $template;
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids\domain\model;
+namespace site\dogrids\domain\service;
 
 use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;

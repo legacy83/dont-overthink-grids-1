@@ -2,8 +2,8 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\model\ColumnsFinder;
-use site\dogrids\domain\model\IntroFinder;
+use site\dogrids\domain\service\ColumnsFinder;
+use site\dogrids\domain\service\IntroFinder;
 
 add_action( 'site/dogrids/front-page/content', function () {
 

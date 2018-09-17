@@ -2,20 +2,15 @@
 
 namespace site\dogrids\domain\service;
 
-use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
-use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
+use site\dogrids\domain\shared\AbstractModel;
 
-class IntroFinder implements ServiceProviderInterface, \IteratorAggregate
+class IntroFinder extends AbstractModel
 {
-    public function getIterator()
+    protected function load()
     {
-        return new \ArrayIterator( [
-            [ 'title' => "Don't Overthink Grids", 'classes' => [ 'front-page-intro' ], ]
-        ] );
-    }
-
-    public function register( ServiceLocatorInterface $serviceLocator )
-    {
-        $serviceLocator->set( self::class, $this );
+        return [
+            'title' => "Don't Overthink Grids",
+            'classes' => [ 'front-page-intro' ],
+        ];
     }
 }

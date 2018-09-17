@@ -4,7 +4,7 @@ namespace site\dogrids\domain\service;
 
 use site\dogrids\domain\shared\AbstractDataProvider;
 
-class ColumnsFinder extends AbstractDataProvider
+class Columns extends AbstractDataProvider
 {
     protected function load()
     {

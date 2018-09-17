@@ -2,8 +2,8 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\service\ColumnsFinder;
-use site\dogrids\domain\service\IntroFinder;
+use site\dogrids\domain\service\Columns;
+use site\dogrids\domain\service\Intro;
 use site\dogrids\interfaces\Assets;
 
 
@@ -15,8 +15,8 @@ use site\dogrids\interfaces\Assets;
 # for running the theme.
 #
 
-theme()->register( new ColumnsFinder() );
-theme()->register( new IntroFinder() );
+theme()->register( new Columns() );
+theme()->register( new Intro() );
 theme()->register( new Assets() );
 
 # ------------------------------------------------------------------------------

@@ -4,7 +4,7 @@ namespace site\dogrids\domain\service;
 
 use site\dogrids\domain\shared\AbstractModel;
 
-class IntroFinder extends AbstractModel
+class Intro extends AbstractModel
 {
     protected function load()
     {

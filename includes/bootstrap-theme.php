@@ -2,8 +2,8 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\ColumnsDataProvider;
-use site\dogrids\domain\IntroModel;
+use site\dogrids\domain\ColumnsRepeater;
+use site\dogrids\domain\IntroRepeater;
 use site\dogrids\interfaces\Assets;
 
 # ------------------------------------------------------------------------------
@@ -14,8 +14,8 @@ use site\dogrids\interfaces\Assets;
 # for running the theme.
 #
 
-theme()->register( new ColumnsDataProvider() );
-theme()->register( new IntroModel() );
+theme()->register( new ColumnsRepeater() );
+theme()->register( new IntroRepeater() );
 theme()->register( new Assets() );
 
 # ------------------------------------------------------------------------------

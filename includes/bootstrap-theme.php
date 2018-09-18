@@ -2,10 +2,9 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\service\Columns;
-use site\dogrids\domain\service\Intro;
+use site\dogrids\domain\ColumnsDataProvider;
+use site\dogrids\domain\IntroModel;
 use site\dogrids\interfaces\Assets;
-
 
 # ------------------------------------------------------------------------------
 # Register service providers.
@@ -15,8 +14,8 @@ use site\dogrids\interfaces\Assets;
 # for running the theme.
 #
 
-theme()->register( new Columns() );
-theme()->register( new Intro() );
+theme()->register( new ColumnsDataProvider() );
+theme()->register( new IntroModel() );
 theme()->register( new Assets() );
 
 # ------------------------------------------------------------------------------

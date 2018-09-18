@@ -1,13 +1,13 @@
 <?php
 
-namespace site\dogrids\domain\service;
+namespace site\dogrids\domain;
 
 use site\dogrids\infrastructure\ServiceProvidedTrait;
 use trsenna\dalen\data\contracts\LoadableModelIterface;
 use trsenna\dalen\data\foundation\LoadableModelTrait;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 
-class Intro implements LoadableModelIterface, ServiceProviderInterface
+class IntroModel implements LoadableModelIterface, ServiceProviderInterface
 {
     use LoadableModelTrait;
     use ServiceProvidedTrait;

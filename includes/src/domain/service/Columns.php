@@ -2,15 +2,17 @@
 
 namespace site\dogrids\domain\service;
 
-use site\dogrids\domain\shared\AbstractDataProvider;
 use site\dogrids\infrastructure\ServiceProvidedTrait;
+use trsenna\dalen\data\contracts\LoadableDataProviderInterface;
+use trsenna\dalen\data\foundation\LoadableDataProviderTrait;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 
-class Columns extends AbstractDataProvider implements ServiceProviderInterface
+class Columns implements LoadableDataProviderInterface, ServiceProviderInterface
 {
+    use LoadableDataProviderTrait;
     use ServiceProvidedTrait;
 
-    protected function load()
+    public function load()
     {
         return [
             [

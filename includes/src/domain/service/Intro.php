@@ -2,15 +2,17 @@
 
 namespace site\dogrids\domain\service;
 
-use site\dogrids\domain\shared\AbstractModel;
 use site\dogrids\infrastructure\ServiceProvidedTrait;
+use trsenna\dalen\data\contracts\LoadableModelIterface;
+use trsenna\dalen\data\foundation\LoadableModelTrait;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 
-class Intro extends AbstractModel implements ServiceProviderInterface
+class Intro implements LoadableModelIterface, ServiceProviderInterface
 {
+    use LoadableModelTrait;
     use ServiceProvidedTrait;
 
-    protected function load()
+    public function load()
     {
         return [
             'title' => "Don't Overthink Grids",

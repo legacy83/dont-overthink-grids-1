@@ -2,10 +2,9 @@
 
 namespace site\dogrids\interfaces;
 
-use site\dogrids\infrastructure\ServiceProvidedTrait;
 use trsenna\dalen\kernel\contracts\BootstrapInterface;
-use trsenna\dalen\kernel\contracts\ServiceLocatorInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
+use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
 
 /**
  * Class Assets
@@ -14,7 +13,7 @@ use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
  */
 class Assets implements BootstrapInterface, ServiceProviderInterface
 {
-    use ServiceProvidedTrait;
+    use ServiceProviderTrait;
 
     /**
      * @inheritdoc

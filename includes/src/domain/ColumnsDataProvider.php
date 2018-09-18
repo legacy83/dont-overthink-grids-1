@@ -2,15 +2,15 @@
 
 namespace site\dogrids\domain;
 
-use site\dogrids\infrastructure\ServiceProvidedTrait;
 use trsenna\dalen\data\contracts\LoadableDataProviderInterface;
 use trsenna\dalen\data\foundation\LoadableDataProviderTrait;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
+use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
 
 class ColumnsDataProvider implements LoadableDataProviderInterface, ServiceProviderInterface
 {
     use LoadableDataProviderTrait;
-    use ServiceProvidedTrait;
+    use ServiceProviderTrait;
 
     public function load()
     {

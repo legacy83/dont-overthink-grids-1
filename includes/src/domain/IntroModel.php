@@ -2,15 +2,15 @@
 
 namespace site\dogrids\domain;
 
-use site\dogrids\infrastructure\ServiceProvidedTrait;
-use trsenna\dalen\data\contracts\LoadableModelIterface;
+use trsenna\dalen\data\contracts\LoadableModelInterface;
 use trsenna\dalen\data\foundation\LoadableModelTrait;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
+use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
 
-class IntroModel implements LoadableModelIterface, ServiceProviderInterface
+class IntroModel implements LoadableModelInterface, ServiceProviderInterface
 {
     use LoadableModelTrait;
-    use ServiceProvidedTrait;
+    use ServiceProviderTrait;
 
     public function load()
     {

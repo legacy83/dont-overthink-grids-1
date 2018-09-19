@@ -5,10 +5,18 @@ namespace site\dogrids;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
 
+/**
+ * Class ColumnsRepeater
+ *
+ * @package site\dogrids
+ */
 class ColumnsRepeater implements \IteratorAggregate, ServiceProviderInterface
 {
     use ServiceProviderTrait;
 
+    /**
+     * @inheritdoc
+     */
     public function getIterator()
     {
         return new \ArrayIterator( [

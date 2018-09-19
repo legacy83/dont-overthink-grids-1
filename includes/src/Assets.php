@@ -6,6 +6,11 @@ use trsenna\dalen\kernel\contracts\BootstrapInterface;
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
 
+/**
+ * Class Assets
+ *
+ * @package site\dogrids
+ */
 class Assets implements BootstrapInterface, ServiceProviderInterface
 {
     use ServiceProviderTrait;

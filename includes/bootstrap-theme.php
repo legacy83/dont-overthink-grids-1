@@ -2,10 +2,6 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\ColumnsRepeater;
-use site\dogrids\domain\IntroRepeater;
-use site\dogrids\interfaces\Assets;
-
 # ------------------------------------------------------------------------------
 # Register service providers.
 # ------------------------------------------------------------------------------
@@ -14,9 +10,9 @@ use site\dogrids\interfaces\Assets;
 # for running the theme.
 #
 
+theme()->register( new Assets() );
 theme()->register( new ColumnsRepeater() );
 theme()->register( new IntroRepeater() );
-theme()->register( new Assets() );
 
 # ------------------------------------------------------------------------------
 # Perform bootstrap actions.

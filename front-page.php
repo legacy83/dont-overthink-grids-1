@@ -2,9 +2,6 @@
 
 namespace site\dogrids;
 
-use site\dogrids\domain\ColumnsRepeater;
-use site\dogrids\domain\IntroRepeater;
-
 add_action( 'site/dogrids/front-page/content', function () {
 
     $repeater = component( IntroRepeater::class );

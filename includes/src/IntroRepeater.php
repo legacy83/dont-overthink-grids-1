@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids\domain;
+namespace site\dogrids;
 
 use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
 use trsenna\dalen\kernel\foundation\ServiceProviderTrait;

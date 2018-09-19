@@ -8,7 +8,7 @@ add_action( 'site/dogrids/front-page/content', function () {
 
     foreach ( $repeater as $intro ) {
         echo template( 'partials/front-page/front-page-section', 'intro' )->render( [
-            'intro' => (object)$intro,
+            'intro' => $intro,
         ] );
     }
 
@@ -20,7 +20,7 @@ add_action( 'site/dogrids/front-page/content', function () {
 
     foreach ( $repeater as $columns ) {
         echo template( 'partials/front-page/front-page-section', 'columns' )->render( [
-            'columns' => (object)$columns,
+            'columns' => $columns,
         ] );
     }
 

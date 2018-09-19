@@ -1,9 +1,9 @@
-<?php /** @var stdClass $intro */ ?>
+<?php /** @var array $intro */ ?>
 
-<section class="<?= implode( ' ', $intro->classes ); ?>">
+<section class="<?= implode( ' ', $intro[ 'classes' ] ); ?>">
 
     <header class="entry-header">
-        <h1 class="entry-title"><?= $intro->title; ?></h1>
+        <h1 class="entry-title"><?= $intro[ 'title' ]; ?></h1>
     </header>
 
     <div class="entry-content">

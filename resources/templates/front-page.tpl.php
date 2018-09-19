@@ -5,7 +5,7 @@
 
         <?php do_action( 'site/dogrids/front-page/content' ); ?>
 
-    </div><!-- #content -->
-</div><!-- #primary -->
+    </div>
+</div>
 
 <?php get_footer(); ?>

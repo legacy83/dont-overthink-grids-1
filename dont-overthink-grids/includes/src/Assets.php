@@ -21,6 +21,7 @@ class Assets implements BootstrapInterface, ServiceProviderInterface
     public function __bootstrap()
     {
         add_action( 'wp_enqueue_scripts', function () {
+            wp_enqueue_style( 'normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' );
             wp_enqueue_style( 'dogrids-style', get_stylesheet_uri() );
         } );
     }

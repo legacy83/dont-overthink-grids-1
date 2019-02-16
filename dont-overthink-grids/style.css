@@ -32,8 +32,13 @@ html {
 }
 
 /*--------------------------------------------------------------
-# Clearings
+# Layout - Columns
 --------------------------------------------------------------*/
+.col-wrap {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 .col-wrap:before,
 .col-wrap:after {
     content: " ";
@@ -44,14 +49,6 @@ html {
     clear: both;
 }
 
-/*--------------------------------------------------------------
-# Layout
---------------------------------------------------------------*/
-.col-wrap {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
 .col {
     min-height: 1px;
     padding-left: 15px;
@@ -60,43 +57,43 @@ html {
 }
 
 @media (min-width: 600px) {
-    .front-page-2cols .col {
+    .col-wrap--2cols .col {
         float: left;
         width: 50%;
     }
 }
 
 @media (min-width: 600px) {
-    .front-page-2cols-left .col {
+    .col-wrap--2cols-left .col {
         float: left;
         width: 40%;
     }
 
-    .front-page-2cols-left .col:nth-child(odd) {
+    .col-wrap--2cols-left .col:nth-child(odd) {
         width: 60%;
     }
 }
 
 @media (min-width: 600px) {
-    .front-page-2cols-right .col {
+    .col-wrap--2cols-right .col {
         float: left;
         width: 40%;
     }
 
-    .front-page-2cols-right .col:nth-child(even) {
+    .col-wrap--2cols-right .col:nth-child(even) {
         width: 60%;
     }
 }
 
 @media (min-width: 600px) {
-    .front-page-3cols .col {
+    .col-wrap--3cols .col {
         float: left;
-        width: 33.333333333%;
+        width: 33.3333%;
     }
 }
 
 @media (min-width: 600px) {
-    .front-page-4cols .col {
+    .col-wrap--4cols .col {
         float: left;
         width: 25%;
     }
@@ -110,9 +107,6 @@ html {
     margin: 3% auto 0;
 }
 
-/*--------------------------------------------------------------
-## Content Area
---------------------------------------------------------------*/
 .content-area h4 {
     background: #fff;
     border: 1px solid #eee;
@@ -124,18 +118,11 @@ html {
 # Front Page
 --------------------------------------------------------------*/
 .front-page-intro,
-.front-page-2cols,
-.front-page-2cols-left,
-.front-page-2cols-right,
-.front-page-3cols,
-.front-page-4cols {
+.front-page-columns {
     margin-bottom: 72px;
     padding-bottom: 24px;
 }
 
-/*--------------------------------------------------------------
-## Front Page Intro
---------------------------------------------------------------*/
 .front-page-intro {
     border-bottom: 4px double #eee;
 }

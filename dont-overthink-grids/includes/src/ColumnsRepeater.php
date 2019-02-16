@@ -23,27 +23,27 @@ class ColumnsRepeater implements \IteratorAggregate, ServiceProviderInterface
             [
                 'size' => 2,
                 'title' => __( 'Two Columns', 'dogrids' ),
-                'classes' => [ 'front-page-2cols' ]
+                'classes' => [ 'col-wrap', 'col-wrap--2cols' ]
             ],
             [
                 'size' => 2,
                 'title' => __( 'Two Columns', 'dogrids' ),
-                'classes' => [ 'front-page-2cols-left' ]
+                'classes' => [ 'col-wrap', 'col-wrap--2cols-left' ]
             ],
             [
                 'size' => 2,
                 'title' => __( 'Two Columns', 'dogrids' ),
-                'classes' => [ 'front-page-2cols-right' ]
+                'classes' => [ 'col-wrap', 'col-wrap--2cols-right' ]
             ],
             [
                 'size' => 3,
                 'title' => __( 'Two Columns', 'dogrids' ),
-                'classes' => [ 'front-page-3cols' ]
+                'classes' => [ 'col-wrap', 'col-wrap--3cols' ]
             ],
             [
                 'size' => 4,
                 'title' => __( 'Two Columns', 'dogrids' ),
-                'classes' => [ 'front-page-4cols' ]
+                'classes' => [ 'col-wrap', 'col-wrap--4cols' ]
             ],
         ] );
     }

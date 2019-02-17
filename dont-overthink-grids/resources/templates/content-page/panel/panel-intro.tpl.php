@@ -1,6 +1,6 @@
 <?php /** @var array $intro */ ?>
 
-<section class="<?= implode( ' ', $intro[ 'classes' ] ); ?>">
+<section class="page-panel-intro">
 
     <header class="entry-header">
         <h1 class="entry-title"><?= $intro[ 'title' ]; ?></h1>

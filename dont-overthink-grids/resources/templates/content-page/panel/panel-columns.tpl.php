@@ -1,6 +1,6 @@
 <?php /** @var array $columns */ ?>
 
-<section class="front-page-columns">
+<section class="page-panel-columns">
 
     <header class="entry-header">
         <h2 class="entry-title"><?= $columns[ 'title' ]; ?></h2>

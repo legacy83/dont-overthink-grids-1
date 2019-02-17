@@ -3,7 +3,7 @@
 ----------------------------------------------------------------
 # Elements
 # Content
-# Front Page
+# Page Panels
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Elements
@@ -35,12 +35,12 @@ html {
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
-.front-page-intro,
-.front-page-columns {
+.page-panel-intro,
+.page-panel-columns {
     margin-bottom: 72px;
     padding-bottom: 24px;
 }
 
-.front-page-intro {
+.page-panel-intro {
     border-bottom: 4px double #eee;
 }

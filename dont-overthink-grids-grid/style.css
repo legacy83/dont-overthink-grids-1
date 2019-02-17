@@ -19,8 +19,6 @@
 ----------------------------------------------------------------
 # Columns
 ## Columns - 2 cols
-## Columns - 2 cols left
-## Columns - 2 cols right
 ## Columns - 3 cols
 ## Columns - 4 cols
 --------------------------------------------------------------*/
@@ -46,36 +44,6 @@
 @media (min-width: 600px) {
     .col-wrap--2cols .col {
         grid-column: span 6;
-    }
-}
-
-/*--------------------------------------------------------------
-## Columns - 2 cols left
---------------------------------------------------------------*/
-@media (min-width: 600px) {
-    .col-wrap--2cols-left .col {
-        grid-column: span 4;
-    }
-}
-
-@media (min-width: 600px) {
-    .col-wrap--2cols-left .col:nth-child(odd) {
-        grid-column: span 8;
-    }
-}
-
-/*--------------------------------------------------------------
-## Columns - 2 cols right
---------------------------------------------------------------*/
-@media (min-width: 600px) {
-    .col-wrap--2cols-right .col {
-        grid-column: span 4;
-    }
-}
-
-@media (min-width: 600px) {
-    .col-wrap--2cols-right .col:nth-child(even) {
-        grid-column: span 8;
     }
 }
 

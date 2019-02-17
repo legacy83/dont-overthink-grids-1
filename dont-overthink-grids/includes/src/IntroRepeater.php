@@ -22,7 +22,6 @@ class IntroRepeater implements \IteratorAggregate, ServiceProviderInterface
         return new \ArrayIterator( [
             [
                 'title' => __( "Don't Overthink Grids", 'dogrids' ),
-                'classes' => [ 'front-page-intro' ],
             ]
         ] );
     }

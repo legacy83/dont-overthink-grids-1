@@ -13,7 +13,7 @@
         <div class="<?= implode( ' ', $columns[ 'classes' ] ); ?>">
             <?php foreach ( range( 1, intval( $columns[ 'size' ] ) ) as $index ) : ?>
                 <div class="col">
-                    <h4>.col</h4>
+                    <h4>col</h4>
                 </div>
             <?php endforeach; ?>
         </div>

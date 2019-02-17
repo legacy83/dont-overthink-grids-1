@@ -13,13 +13,9 @@
 
     <div id="content" class="site-content">
 
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main">
-
-                <?php do_action( 'site/dogrids/front-page/content' ); ?>
-
-            </main><!-- #main -->
-        </div><!-- #primary -->
+        <?php if ( isset( $content ) && is_a( $content, \trsenna\dalen\template\contracts\TemplateInterface::class ) ): ?>
+            <?= call_user_func( [ $content, 'render' ] ); ?>
+        <?php endif; ?>
 
     </div><!-- #content -->
 

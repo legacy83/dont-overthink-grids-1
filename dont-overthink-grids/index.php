@@ -26,4 +26,8 @@ add_action( 'site/dogrids/front-page/content', function () {
 
 } );
 
-echo template( 'front-page' )->render();
+component( Markup::class )
+    ->layout( 'layout/main/main' )
+    ->content( 'content-page/page/page', 'front' );
+
+echo component( Markup::class )->render();

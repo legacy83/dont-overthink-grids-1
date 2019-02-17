@@ -1,5 +1,5 @@
 /**
- * Theme Name:  Don't Overthink Grids - CSS Flex
+ * Theme Name:  Don't Overthink Grids - Flex
  * Author:      Thiago Senna
  * Author URI:  http://thremes.com.br/
  * Description: The Don't Overthink Grids theme.
@@ -18,45 +18,37 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Columns
-## Columns - 2 cols
 ## Columns - 2 cols left
 ## Columns - 2 cols right
-## Columns - 3 cols
-## Columns - 4 cols
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Columns
 --------------------------------------------------------------*/
 .col-wrap {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media (min-width: 600px) {
+    .col-wrap {
+        flex-direction: row;
+    }
 }
 
 .col {
     flex: 1;
-}
-
-/*--------------------------------------------------------------
-## Columns - 2 cols
---------------------------------------------------------------*/
-@media (min-width: 600px) {
-    .col-wrap--2cols .col {
-        max-width: 49%;
-    }
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*--------------------------------------------------------------
 ## Columns - 2 cols left
 --------------------------------------------------------------*/
 @media (min-width: 600px) {
-    .col-wrap--2cols-left .col {
-        max-width: 39%;
-    }
-}
-
-@media (min-width: 600px) {
     .col-wrap--2cols-left .col:nth-child(odd) {
-        max-width: 59%;
+        flex: 2;
     }
 }
 
@@ -64,31 +56,7 @@
 ## Columns - 2 cols right
 --------------------------------------------------------------*/
 @media (min-width: 600px) {
-    .col-wrap--2cols-right .col {
-        max-width: 59%;
-    }
-}
-
-@media (min-width: 600px) {
-    .col-wrap--2cols-right .col:nth-child(odd) {
-        max-width: 39%;
-    }
-}
-
-/*--------------------------------------------------------------
-## Columns - 3 cols
---------------------------------------------------------------*/
-@media (min-width: 600px) {
-    .col-wrap--3cols .col {
-        max-width: 32%;
-    }
-}
-
-/*--------------------------------------------------------------
-## Columns - 4 cols
---------------------------------------------------------------*/
-@media (min-width: 600px) {
-    .col-wrap--4cols .col {
-        max-width: 24%;
+    .col-wrap--2cols-right .col:nth-child(even) {
+        flex: 2;
     }
 }

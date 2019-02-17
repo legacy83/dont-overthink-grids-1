@@ -13,6 +13,16 @@
 @import "resources/assets/css/style.theme.css";
 
 /*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Columns
+## Columns - 2 cols
+## Columns - 2 cols left
+## Columns - 2 cols right
+## Columns - 3 cols
+## Columns - 4 cols
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Columns
 --------------------------------------------------------------*/
 .col-wrap {
@@ -55,7 +65,9 @@
         float: left;
         width: 40%;
     }
+}
 
+@media (min-width: 600px) {
     .col-wrap--2cols-left .col:nth-child(odd) {
         width: 60%;
     }
@@ -69,7 +81,9 @@
         float: left;
         width: 40%;
     }
+}
 
+@media (min-width: 600px) {
     .col-wrap--2cols-right .col:nth-child(even) {
         width: 60%;
     }

@@ -12,16 +12,3 @@
 <div id="page" class="site">
 
     <div id="content" class="site-content">
-
-        <?php if ( isset( $content ) && is_a( $content, \trsenna\dalen\template\contracts\TemplateInterface::class ) ): ?>
-            <?= call_user_func( [ $content, 'render' ] ); ?>
-        <?php endif; ?>
-
-    </div><!-- #content -->
-
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>

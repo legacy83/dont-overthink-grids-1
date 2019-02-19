@@ -13,7 +13,6 @@ namespace site\dogrids;
 theme()->register( new Assets() );
 theme()->register( new ColumnsRepeater() );
 theme()->register( new IntroRepeater() );
-theme()->register( new Markup() );
 
 # ------------------------------------------------------------------------------
 # Perform bootstrap actions.

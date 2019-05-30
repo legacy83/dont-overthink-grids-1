@@ -1,9 +1,9 @@
 <?php
 
-namespace site\dogrids;
+namespace DOGrids;
 
-use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
-use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
+use Dalen\Contracts\DI\ServiceProviderInterface;
+use Dalen\DI\ServiceProviderTrait;
 
 /**
  * Class IntroRepeater
@@ -22,7 +22,7 @@ class IntroRepeater implements \IteratorAggregate, ServiceProviderInterface
         return new \ArrayIterator( [
             [
                 'title' => __( "Don't Overthink Grids", 'dogrids' ),
-            ]
+            ],
         ] );
     }
 }

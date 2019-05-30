@@ -1,6 +1,6 @@
 <?php
 
-namespace site\dogrids;
+namespace Alpha\Behemoth;
 
 use Composer\Autoload\ClassLoader;
 use function Composer\Autoload\includeFile;
@@ -14,7 +14,7 @@ use function Composer\Autoload\includeFile;
 #
 
 $loader = new ClassLoader();
-$loader->setPsr4( 'site\\dogrids\\', get_theme_file_path( 'includes/src' ) );
+$loader->setPsr4( 'DOGrids\\', get_theme_file_path( 'includes/src' ) );
 $loader->register();
 
 # ------------------------------------------------------------------------------

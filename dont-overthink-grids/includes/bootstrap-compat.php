@@ -1,28 +1,6 @@
 <?php
 
 # ------------------------------------------------------------------------------
-# Minimal WP/PHP requirements.
-# ------------------------------------------------------------------------------
-#
-# This section checks if PHP and WordPress has their minimal
-# requirements satisfied.
-#
-
-$safe = version_compare( $GLOBALS[ 'wp_version' ], '5.0.3', '>=' );
-$safe = $safe && version_compare( PHP_VERSION, '7.2', '>=' );
-
-# ------------------------------------------------------------------------------
-# Searches for `Dalen-the-plugin` plugin.
-# ------------------------------------------------------------------------------
-#
-# This section checks if `Dalen-the-plugin` plugin is active. Also
-# checks if it's minimal version is satisfied.
-#
-
-$safe = $safe && defined( 'DALEN_THE_PLUGIN' ) && DALEN_THE_PLUGIN;
-$safe = $safe && version_compare( DALEN_THE_PLUGIN_VERSION, '0.3.0', '>=' );
-
-# ------------------------------------------------------------------------------
 # Maybe display error messages.
 # ------------------------------------------------------------------------------
 #
@@ -30,24 +8,30 @@ $safe = $safe && version_compare( DALEN_THE_PLUGIN_VERSION, '0.3.0', '>=' );
 # wasn't met.
 #
 
-if ( !$safe ) {
+add_action( 'dogrids/unsafe', function () {
     add_action( 'admin_notices', function () {
-        $theme_name = basename( dirname( __DIR__ ) );
+
+        $theme_name = wp_get_theme()->get( 'Name' );
 
         printf(
             '<div class="error"><p>%s</p></div>',
             __( "Minimal requirements are not satisfied by {$theme_name} theme. Please, ask 
             for some help from your developer or just activate another theme.", 'dogrids' )
         );
+
     } );
-}
+} );
 
 # ------------------------------------------------------------------------------
-# Return if it's safe environment.
+# Checks if it's a safe environment.
 # ------------------------------------------------------------------------------
 #
-# Just return a positive or negative status about how safe is
-# running this theme with the current WordPress environment.
+# This section checks if minimal requirements is satisfied and notify
+# by hooks if the environment is safe or unsafe.
 #
 
-return $safe;
+$safe = defined( 'DALEN_PLUGIN' ) && DALEN_PLUGIN;
+$safe = $safe && version_compare( DALEN_PLUGIN_VERSION, '0.1.0', '>=' );
+
+if ( $safe ) do_action( 'dogrids/safe' );
+if ( !$safe ) do_action( 'dogrids/unsafe' );

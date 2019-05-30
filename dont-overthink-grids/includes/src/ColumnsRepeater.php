@@ -1,14 +1,14 @@
 <?php
 
-namespace site\dogrids;
+namespace DOGrids;
 
-use trsenna\dalen\kernel\contracts\ServiceProviderInterface;
-use trsenna\dalen\kernel\foundation\ServiceProviderTrait;
+use Dalen\Contracts\DI\ServiceProviderInterface;
+use Dalen\DI\ServiceProviderTrait;
 
 /**
  * Class ColumnsRepeater
  *
- * @package site\dogrids
+ * @package DOGrids
  */
 class ColumnsRepeater implements \IteratorAggregate, ServiceProviderInterface
 {

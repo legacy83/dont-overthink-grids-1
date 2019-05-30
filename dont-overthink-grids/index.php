@@ -1,7 +1,7 @@
 <?php
 
-namespace site\dogrids;
+namespace DOGrids;
 
-echo template( 'layout/header/header' )->render();
-echo template( 'content-page/page/page', 'front' )->render();
-echo template( 'layout/footer/footer' )->render();
+echo view( 'layout/header/header' )->render();
+echo view( 'content-page/page/page', 'front' )->render();
+echo view( 'layout/footer/footer' )->render();

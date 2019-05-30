@@ -1,23 +1,24 @@
 <?php
 
-namespace site\dogrids;
+namespace DOGrids;
 
-use trsenna\dalen\kernel\foundation\ServiceLocator;
-use trsenna\dalen\kernel\Theme;
-use trsenna\dalen\template\foundation\ThemeLocate;
-use trsenna\dalen\template\Template;
+use Dalen\DI\ServiceLocator;
+use Dalen\Theme;
+use Dalen\View\ThemeViewLocate;
+use Dalen\View\View;
+use Dalen\View\ViewNames;
 
 /**
  * Get the theme instance.
  *
  * @return Theme
  */
-function theme()
+function theme(): Theme
 {
     static $theme;
     if ( !isset( $theme ) ) {
-        $serviceLocator = new ServiceLocator();
-        $theme = new Theme( $serviceLocator );
+        $locator = new ServiceLocator();
+        $theme = new Theme( $locator );
     }
 
     return $theme;
@@ -30,23 +31,26 @@ function theme()
  *
  * @return mixed|null
  */
-function component( $key )
+function component( $key ): ?object
 {
-    return theme()->getServiceLocator()->get( $key );
+    $locator = theme()->getServiceLocator();
+    $component = $locator->get( $key );
+
+    return $component;
 }
 
 /**
- * Get a new template instance.
+ * Get a new view instance.
  *
- * @param      $slug
- * @param null $name
+ * @param string      $slug
+ * @param string|null $name
  *
- * @return Template
+ * @return View
  */
-function template( $slug, $name = null )
+function view( $slug, $name = null ): View
 {
-    $template = new Template( "resources/templates/{$slug}", $name );
-    $template->setLocate( new ThemeLocate( 'tpl.php' ) );
-
-    return $template;
+    return new View(
+        new ViewNames( "resources/views/{$slug}", $name ),
+        new ThemeViewLocate()
+    );
 }

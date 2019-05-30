@@ -1,13 +1,13 @@
 <?php
 
-namespace site\dogrids;
+namespace DOGrids;
 
 # ------------------------------------------------------------------------------
 # Register service providers.
 # ------------------------------------------------------------------------------
 #
-# Before booting the application, add any service providers that are necessary
-# for running the theme.
+# Before booting the application, add any service providers that are
+# necessary for running the theme.
 #
 
 theme()->register( new Assets() );
@@ -22,7 +22,7 @@ theme()->register( new IntroRepeater() );
 # bootstrapping process.
 #
 
-do_action( 'site/dogrids/bootstrap', theme() );
+do_action( 'dogrids/bootstrap', theme() );
 
 # ------------------------------------------------------------------------------
 # Bootstrap the theme.

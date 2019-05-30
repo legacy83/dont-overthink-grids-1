@@ -1,6 +1,6 @@
 <?php
 
-namespace Alpha\Behemoth;
+namespace DOGrids;
 
 use Composer\Autoload\ClassLoader;
 use function Composer\Autoload\includeFile;
